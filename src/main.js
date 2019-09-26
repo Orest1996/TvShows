@@ -1,5 +1,4 @@
 let output = document.querySelector('#output');
-console.log(output);
 
 const baseUrl ='https://api.themoviedb.org/3/';
 const SearchTv = 'search/tv?';
@@ -12,6 +11,10 @@ function getTvShows(page) {
     if (!arguments[0]) page = initialPage;
     output.innerHTML = '';
 
+    let title = document.createElement("h2");
+    title.textContent = "popular TV shows";
+    output.appendChild(title);
+
     let ul = document.createElement('ul');
     output.appendChild(ul);
 
@@ -19,6 +22,7 @@ function getTvShows(page) {
     fetch(url).then(response => response.json())
         .then((data)=>{
             JSON.stringify(data);
+            console.log(data)
             for (let i = 0; i < data.results.length; i++ ) {
                 let li = document.createElement('li');
                 li.innerHTML = data.results[i].original_name;
@@ -37,14 +41,12 @@ function createButton(className) {
 }
 
 function onPaginatorClickPrev(data) {
-    console.log(data.page);
     if ((data.page <= data.total_pages) && (data.page > 0)) {
         getTvShows(data.page - 1)
     }
 }
 
 function onPaginatorClickNext(data) {
-    console.log(data.page);
     if (data.page < data.total_pages) {
         getTvShows(data.page + 1)
     }
@@ -65,7 +67,6 @@ function drawPaginator (data) {
     paginator.appendChild(span);
     output.appendChild(paginator)
 }
-
 
 getTvShows();
 

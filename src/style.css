@@ -3,16 +3,63 @@
   outline: none;
 }
 
-ul {
+body {
+  margin: 0;
+  background-image: url("images/bgcPhoto.jpg");
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  height: 100vh;
+}
+.container #output {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.container #output span {
+  color: #e45e;
+}
+.container #output h2 {
+  color: #e45e;
+}
+.container #output h2:hover {
+  color: #f45a;
+  cursor: pointer;
+}
+.container #output ul {
+  display: flex;
+  flex-direction: column;
+  min-width: 70%;
+  min-height: 50%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
   margin: 0;
   padding: 0;
 }
-ul li {
+.container #output ul li {
+  width: 50%;
+  text-align: left;
+  color: #ffffff;
   list-style: none;
+  margin: 2px 0;
+  display: inline-block;
+}
+.container #output ul li:hover {
+  cursor: pointer;
+  color: #ff8e;
 }
 
-body {
-  margin: 0;
+.paginator {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
 }
 
 /*# sourceMappingURL=style.css.map */

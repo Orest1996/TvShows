@@ -1,11 +1,53 @@
 *
   box-sizing: border-box
   outline: none
-ul
-  margin: 0
-  padding: 0
-  li
-    list-style: none
 body
   margin: 0
+  background-image: url("images/bgcPhoto.jpg")
+
+.container
+  width: 80%
+  margin: 0 auto
+  text-align: center
+  height: 100vh
+  #output
+    height: 100%
+    display: flex
+    flex-direction: column
+    flex-wrap: nowrap
+    justify-content: space-around
+    align-items: center
+    span
+      color: #e45e
+    h2
+      color: #e45e
+      &:hover
+        color: #f45a
+        cursor: pointer
+    ul
+      display: flex
+      flex-direction: column
+      min-width: 70%
+      min-height: 50%
+      flex-wrap: wrap
+      align-items: center
+      justify-content: start
+      margin: 0
+      padding: 0
+      li
+        width: 50%
+        text-align: left
+        color: #ffffff
+        list-style: none
+        margin: 2px 0
+        display: inline-block
+        &:hover
+          cursor: pointer
+          color: #ff8e
+
+
+.paginator
+  display: flex
+  width: 30%
+  justify-content: space-around
 
