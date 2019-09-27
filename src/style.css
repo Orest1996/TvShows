@@ -16,6 +16,9 @@ body {
 }
 .container #output {
   height: 100%;
+}
+.container #output #wrapper {
+  height: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -36,7 +39,7 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 70%;
-  min-height: 50%;
+  max-height: 40%;
   flex-wrap: wrap;
   align-items: center;
   justify-content: start;
@@ -54,6 +57,9 @@ body {
 .container #output ul li:hover {
   cursor: pointer;
   color: #ff8e;
+}
+.container #output ul .list-detail-item {
+  text-align: center;
 }
 
 .paginator {
@@ -76,6 +82,38 @@ button:hover {
   background: #f45a;
   color: #ff8e;
   box-shadow: 0 0 5px 3px;
+}
+
+.containerElements {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.containerElements .topContainer {
+  display: flex;
+  justify-content: space-around;
+}
+.containerElements .topContainer .imgContainer {
+  display: flex;
+  width: 30%;
+}
+.containerElements .topContainer .description {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  color: white;
+}
+.containerElements .counters {
+  font-size: 22px;
+  font-weight: bold;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  margin: 10px 0;
 }
 
 /*# sourceMappingURL=style.css.map */

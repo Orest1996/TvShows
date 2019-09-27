@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed450adb-b683-4091-9efe-148294b129a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/js/events.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/creating.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.sass" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +58,7 @@
       <workItem from="1569490781959" duration="23099000" />
       <workItem from="1569524016515" duration="1000000" />
       <workItem from="1569572201497" duration="1664000" />
-      <workItem from="1569573881017" duration="838000" />
+      <workItem from="1569573881017" duration="12648000" />
     </task>
     <servers />
   </component>

@@ -12,11 +12,13 @@ body
   height: 100vh
   #output
     height: 100%
-    display: flex
-    flex-direction: column
-    flex-wrap: nowrap
-    justify-content: space-around
-    align-items: center
+    #wrapper
+      height: 100%
+      display: flex
+      flex-direction: column
+      flex-wrap: nowrap
+      justify-content: space-around
+      align-items: center
     span
       color: #e45e
     h2
@@ -28,7 +30,7 @@ body
       display: flex
       flex-direction: column
       min-width: 70%
-      min-height: 50%
+      max-height: 40%
       flex-wrap: wrap
       align-items: center
       justify-content: start
@@ -44,6 +46,8 @@ body
         &:hover
           cursor: pointer
           color: #ff8e
+      .list-detail-item
+        text-align: center
 
 
 .paginator
@@ -65,4 +69,29 @@ button
     color: #ff8e
     box-shadow: 0 0 5px 3px
 
-
+.containerElements
+  height: 100%
+  display: flex
+  flex-direction: column
+  flex-wrap: nowrap
+  align-items: center
+  justify-content: space-around
+  .topContainer
+    display: flex
+    justify-content: space-around
+    .imgContainer
+      display: flex
+      width: 30%
+    .description
+      display: flex
+      align-items: center
+      width: 50%
+      color: white
+  .counters
+    font-size: 22px
+    font-weight: bold
+    width: 50%
+    display: flex
+    justify-content: space-around
+    flex-wrap: nowrap
+    margin: 10px 0
