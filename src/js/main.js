@@ -1,4 +1,7 @@
+"use strict";
+import { onPaginatorClickPrev, onPaginatorClickNext, onPaginatorClickNextRated, onPaginatorClickPrevRated } from './events.js'
 let output = document.querySelector('#output');
+
 
 const baseUrl ='https://api.themoviedb.org/3/';
 const SearchTv = 'search/tv?';
@@ -9,7 +12,7 @@ const query = 'query=GET&page=';
 let initialPage = 'page=1';
 
 
-function getTopRated(page) {
+export function getTopRated(page) {
     if (!arguments[0]) page = initialPage;
     output.innerHTML = '';
 
@@ -38,7 +41,7 @@ function getTopRated(page) {
     output.appendChild(toPopular);
 }
 
-function getTvShows(page) {
+export function getTvShows(page) {
     if (!arguments[0]) page = initialPage;
     output.innerHTML = '';
 
@@ -74,30 +77,6 @@ function createButton(className) {
     button.className = className;
     button.textContent = className;
     return button
-}
-
-function onPaginatorClickPrev(data) {
-    if ((data.page <= data.total_pages) && (data.page > 0)) {
-        getTvShows(data.page - 1)
-    }
-}
-
-function onPaginatorClickNext(data) {
-    if (data.page < data.total_pages) {
-        getTvShows(data.page + 1)
-    }
-}
-
-function onPaginatorClickNextRated(data) {
-    if (data.page < data.total_pages) {
-        getTopRated(data.page + 1)
-    }
-}
-
-function onPaginatorClickPrevRated(data) {
-    if ((data.page <= data.total_pages) && (data.page > 0)) {
-        getTopRated(data.page - 1)
-    }
 }
 
 function drawPaginator (data,events) {
