@@ -13,7 +13,6 @@ const query = 'query=GET&page=';
 let initialPage = 'page=1';
 
 
-
 export function getTopRated(page) {
     if (!arguments[0]) page = initialPage;
     output.innerHTML = '';
@@ -115,7 +114,6 @@ function getShowDetails(id) {
     fetch(url)
         .then(response => response.json())
         .then(data => {
-
            createElementDetails(data)
         })
 }

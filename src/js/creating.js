@@ -90,7 +90,47 @@ export function createSeasonDetails(data, seasonDetails, id) {
                 let li = document.createElement('li');
                     li.textContent = data.episodes[i].name;
                     li.className = 'list-detail-item';
+                    li.addEventListener('click', () => createEpisodeDetails(data.episodes[i]));
                     ul.appendChild(li)
             }
         })
+}
+
+function createEpisodeDetails(data) {
+    let output = document.querySelector('#output');
+    output.innerHTML = '';
+
+    let containerElements = document.createElement('div');
+    containerElements.className = 'containerElements';
+    output.appendChild(containerElements);
+
+    let title = document.createElement('h2');
+    title.textContent = data.name;
+    containerElements.appendChild(title);
+
+    let topContainer = document.createElement('div');
+    topContainer.className = 'topContainer';
+    containerElements.appendChild(topContainer);
+
+    let imgContainer = document.createElement('span');
+    imgContainer.innerHTML = `<img src="https://image.tmdb.org/t/p/w154/${data.still_path}" alt="${data.name}"/>`;
+    imgContainer.className = 'imgContainer';
+    topContainer.appendChild(imgContainer);
+
+
+    let description = document.createElement('div');
+    let descriptionText = document.createElement('p');
+    if(data.overview){
+        descriptionText.textContent = data.overview;
+    } else {
+        descriptionText.textContent = 'There is no description for this season'
+    }
+    description.className = 'description';
+    description.appendChild(descriptionText);
+    topContainer.appendChild(description);
+
+    let counters = document.createElement('div');
+    counters.innerHTML = `<span>Espisode № ${data.episode_number}</span><span>Season № ${data.season_number}</span>`;
+    counters.className = 'counters';
+    containerElements.appendChild(counters);
 }
