@@ -64,16 +64,13 @@ export function createSeasonDetails(data, seasonDetails, id) {
     imgContainer.className = 'imgContainer';
     topContainer.appendChild(imgContainer);
 
-
     let description = document.createElement('div');
-    let descriptionText = document.createElement('p');
     if(seasonDetails.overview){
-        descriptionText.textContent = seasonDetails.overview;
+        description.textContent = seasonDetails.overview;
     } else {
-        descriptionText.textContent = 'There is no description for this season'
+        description.textContent = 'There is no description for this season'
     }
     description.className = 'description';
-    description.appendChild(descriptionText);
     topContainer.appendChild(description);
 
     let counters = document.createElement('div');
